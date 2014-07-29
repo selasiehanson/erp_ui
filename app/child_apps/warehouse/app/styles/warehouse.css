@@ -1,0 +1,11 @@
+#warehouse .navbar-default {
+  background-color: whitesmoke;
+}
+
+#warehouse .navbar-brand {
+  color: #444;
+}
+
+#warehouse .navbar-nav > li > a {
+  color: #777;
+}

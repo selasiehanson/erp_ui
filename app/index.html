@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <link rel="stylesheet" type="text/css" href="child_apps/warehouse/app/styles/warehouse.css">
+    </head>
+    <body >
+        <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!-- Add your site or application content here -->
+        <!-- <div ng-include="'views/header.html'"></div> -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">PROTO ERP</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Main</a></li>
+                        <li><a href="http://0.0.0.0:9050" target="_blank">POS</a></li>
+                        
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome Kofi Manu <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">App Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Sign out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+            <div>
+                <div class="container-fluid">
+                    <div class="row" id="mainApp">
+                        <div class="sidebar">
+                            <ul class="nav nav-sidebar">
+                                <li> <a href="" class="side-caption"> APPS </a> </li>
+                            </ul>
+                            <ul class="nav nav-sidebar">
+                                <li class="active"><a href="#/app/main_page">Main</a></li>
+                                <li><a href="#/pos">Pos</a></li>
+                                <li><a href="#/warehouse">Warehouse</a></li>
+                                <li><a href="#/app/settings">Main Settings</a></li>
+                            </ul>
+                        </div>
+                        <div class="main" >                            
+                            <div ng-app="masterAppApp" class="pane ">
+                                <ui-view></ui-view>
+                            </div>
+                            <!-- <div id="warehouseApp" class="pane ">
+                                <ui-view></ui-view>
+                            </div> -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!--[if lt IE 9]>
+            <script src="bower_components/es5-shim/es5-shim.js"></script>
+            <script src="bower_components/json3/lib/json3.min.js"></script>
+            <![endif]-->
+            <!-- build:js scripts/vendor.js -->
+            <!-- bower:js -->
+            <script src="bower_components/jquery/dist/jquery.js"></script>
+            <script src="bower_components/angular/angular.js"></script>
+            <script src="bower_components/json3/lib/json3.js"></script>
+            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
+            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
+            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
+            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
+            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
+            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
+            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+            <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
+            <script src="bower_components/angular-resource/angular-resource.js"></script>
+            <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+            <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+            <script src="bower_components/angular-animate/angular-animate.js"></script>
+            <script src="bower_components/angular-touch/angular-touch.js"></script>
+            <script src="bower_components/angular-route/angular-route.js"></script>
+            <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+            <!-- endbower -->
+            <!-- endbuild -->
+            <!-- child apps scripts -->
+            <script src="child_apps/pos/app/scripts/app.js"></script>
+            <script src="child_apps/pos/app/scripts/controllers/main.js"></script>
+            <script src="child_apps/warehouse/app/scripts/app.js"></script>
+            <!-- build:js({.tmp,app}) scripts/scripts.js -->
+            <script src="scripts/app.js"></script>
+            <script src="scripts/controllers/main.js"></script>
+            <script src="scripts/controllers/app_ctrl.js"></script>
+            <script src="scripts/controllers/about.js"></script>
+            <script src="scripts/controllers/child_app.js"></script>
+            <!-- endbuild -->
+        </body>
+    </html>

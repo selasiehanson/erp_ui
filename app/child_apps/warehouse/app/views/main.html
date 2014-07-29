@@ -1,0 +1,46 @@
+<div id="warehouse">
+  <div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <span class="navbar-brand">Ware House</span>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Main</a></li>
+          <li><a href="#/warehouse">Asset Tracking</a></li>
+          <li><a href="#/warehouse">Package Tracking</a></li>
+          <li><a href="#/warehouse">Shippings</a></li>
+          <li><a href="#/warehouse">Inventory</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <h2>Inventory:Items</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="ax-grid-action-1">#</th>
+        <th>Name</th>
+        <th>Qty in Stock</th>
+        <th>Re-order Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in items">
+        <td> {{ $index + 1}}.</td>
+        <td> {{ item.name }} </td>
+        <td> {{ item.qauntity }}</td>
+        <td> {{ item.reOrderLevel}} </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
